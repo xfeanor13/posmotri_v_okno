@@ -41,7 +41,7 @@ ol {
 .content {
   display: flex;
   margin: auto;
-  max-width: 1140px;
+  width: 1140px;
 }
 
 .result {
@@ -85,6 +85,7 @@ ol {
   display: flex;
   gap: 5px;
   width: fit-content;
+  align-items: center;
 }
 
 .search-form__label-text {
@@ -113,6 +114,7 @@ ol {
   font-weight: 400;
   line-height: 21.6px;
   text-align: left;
+  color: white;
 }
 
 .search-form__checkbox-list {
@@ -139,7 +141,7 @@ ol {
 
 .button {
   cursor: pointer;
-  border: 1px solid white;
+  border: 1px solid currentColor;
   background-color: transparent;
   color: white;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -205,6 +207,7 @@ ol {
   display: flex;
   flex-direction: column;
   min-width: 200px;
+
   min-height: 101px;
   margin: 2px 0px 0px 2px;
   gap: 6px;
@@ -218,6 +221,10 @@ ol {
   line-height: 30px;
   text-align: left;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-description {
@@ -232,6 +239,7 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   max-height: 103px;
+  object-position: center;
 }
 
 .more-button {
@@ -240,10 +248,6 @@ ol {
 }
 
 .button:hover {
-  text-decoration: underline;
-}
-
-.search-form__label-text:hover {
   text-decoration: underline;
 }
 
@@ -306,4 +310,8 @@ input[type="checkbox"]:checked + span::after {
   background-color: white;
   display: block;
   content: "";
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
 }
